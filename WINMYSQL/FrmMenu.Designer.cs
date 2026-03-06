@@ -30,11 +30,11 @@
         {
             menuStrip1 = new MenuStrip();
             archivoToolStripMenuItem = new ToolStripMenuItem();
+            salirToolStripMenuItem = new ToolStripMenuItem();
             catalogoToolStripMenuItem = new ToolStripMenuItem();
             alumnoToolStripMenuItem = new ToolStripMenuItem();
             materiaToolStripMenuItem = new ToolStripMenuItem();
             profesorToolStripMenuItem = new ToolStripMenuItem();
-            salirToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -55,6 +55,12 @@
             archivoToolStripMenuItem.Size = new Size(73, 24);
             archivoToolStripMenuItem.Text = "Archivo";
             // 
+            // salirToolStripMenuItem
+            // 
+            salirToolStripMenuItem.Name = "salirToolStripMenuItem";
+            salirToolStripMenuItem.Size = new Size(121, 26);
+            salirToolStripMenuItem.Text = "Salir";
+            // 
             // catalogoToolStripMenuItem
             // 
             catalogoToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { alumnoToolStripMenuItem, materiaToolStripMenuItem, profesorToolStripMenuItem });
@@ -73,18 +79,13 @@
             materiaToolStripMenuItem.Name = "materiaToolStripMenuItem";
             materiaToolStripMenuItem.Size = new Size(224, 26);
             materiaToolStripMenuItem.Text = "Materia";
+            materiaToolStripMenuItem.Click += materiaToolStripMenuItem_Click;
             // 
             // profesorToolStripMenuItem
             // 
             profesorToolStripMenuItem.Name = "profesorToolStripMenuItem";
             profesorToolStripMenuItem.Size = new Size(224, 26);
             profesorToolStripMenuItem.Text = "Profesor";
-            // 
-            // salirToolStripMenuItem
-            // 
-            salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            salirToolStripMenuItem.Size = new Size(224, 26);
-            salirToolStripMenuItem.Text = "Salir";
             // 
             // FrmMenu
             // 
