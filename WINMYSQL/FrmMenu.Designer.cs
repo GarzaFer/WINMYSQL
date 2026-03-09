@@ -73,6 +73,7 @@
             alumnoToolStripMenuItem.Name = "alumnoToolStripMenuItem";
             alumnoToolStripMenuItem.Size = new Size(224, 26);
             alumnoToolStripMenuItem.Text = "Alumno";
+            alumnoToolStripMenuItem.Click += alumnoToolStripMenuItem_Click;
             // 
             // materiaToolStripMenuItem
             // 
