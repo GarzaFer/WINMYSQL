@@ -21,5 +21,11 @@ namespace WINMYSQL
             FrmAlumnos alumnos = new FrmAlumnos();
             alumnos.ShowDialog();
         }
+
+        private void profesorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmProfesores profesores = new FrmProfesores();
+            profesores.ShowDialog();
+        }
     }
 }

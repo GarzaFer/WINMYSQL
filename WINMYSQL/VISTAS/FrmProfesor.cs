@@ -9,56 +9,56 @@ using WINMYSQL.CLASES;
 
 namespace WINMYSQL.VISTAS
 {
-    public partial class FrmAlumno : Form
+    public partial class FrmProfesor : Form
     {
         int id = 0;
         bool updating = false;
         Datos dt = new Datos();
-        public FrmAlumno()
+        public FrmProfesor()
         {
             InitializeComponent();
         }
 
-        public FrmAlumno(int id, string Alumno, string num)
+        public FrmProfesor(int id, string Profesor, string cve)
         {
             InitializeComponent();
             this.id = id;
-            txtAlumno.Text = Alumno;
-            txtNumControl.Text = num;
+            txtProfesor.Text = Profesor;
+            txtClave.Text = cve;
             updating = true;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnAceptar_Click(object sender, EventArgs e)
         {
             if (updating == false)
             {
                 bool resultado = dt.ejecutarcomando(
-                    $"Insert into Alumnos (Alumno,nControl) " +
-                    $"values ('{txtAlumno.Text}','{txtNumControl.Text}')");
+                    $"Insert into Profesor (Profesor,CVE) " +
+                    $"values ('{txtProfesor.Text}','{txtClave.Text}')");
 
                 if (resultado)
                 {
-                    MessageBox.Show("Alumno agregado correctamente");
+                    MessageBox.Show("Profesor agregado correctamente");
                     this.Close();
                 }
                 else
                 {
-                    MessageBox.Show("Error al agregar la Alumno");
+                    MessageBox.Show("Error al agregar la Profesor");
                 }
             }
             else
             {
                 bool resultado = dt.ejecutarcomando(
-                    $"Update Alumnos set Alumno='{txtAlumno.Text}', CVE='{txtNumControl.Text}' " +
-                    $"where idAlumnos={id}");
+                    $"Update Profesor set Profesor='{txtProfesor.Text}', CVE='{txtClave.Text}' " +
+                    $"where idProfesor={id}");
                 if (resultado)
                 {
-                    MessageBox.Show("Alumno actualizado correctamente");
+                    MessageBox.Show("Profesor actualizado correctamente");
                     this.Close();
                 }
                 else
                 {
-                    MessageBox.Show("Error al actualizar el Alumno");
+                    MessageBox.Show("Error al actualizar el Profesor");
                 }
             }
         }

@@ -87,6 +87,7 @@
             profesorToolStripMenuItem.Name = "profesorToolStripMenuItem";
             profesorToolStripMenuItem.Size = new Size(224, 26);
             profesorToolStripMenuItem.Text = "Profesor";
+            profesorToolStripMenuItem.Click += profesorToolStripMenuItem_Click;
             // 
             // FrmMenu
             // 
